@@ -22,7 +22,7 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data]);
 
-  const handleClickViewAllProjects = () => {
+  const handleClickViewAllProjects = (projects) => {
     trackEventToUmami({
       eventValue: "Home: View All Projects",
       eventType: "navigate",
@@ -39,7 +39,7 @@ const ProjectsSection = ({ data }: ProjectsSectionProps) => {
 
       <Grid
         gap={8}
-        templateColumns={["repeat(1)", "repeat(1)", "repeat(2, 1fr)"]}
+        templateColumns={["repeat(1)", "repeat(1)", "repeat(3, 1fr)"]}
         marginY={8}
       >
         {data
